@@ -1,0 +1,59 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<!--
+	<parent>
+		<groupId>br.com.impacta</groupId>
+		<artifactId>buscadorPotenciaisClientes</artifactId>
+		<version>1.0-SNAPSHOT</version>   
+	</parent>
+	-->
+	<groupId>br.com.impacta</groupId>
+	<artifactId>buscadorPotenciaisClientesEJBClient</artifactId>
+	<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+	<name>buscadorPotenciaisClientesEJBClient</name>
+	<description>Modulo EJBClient da aplicacao buscadorPotenciaisClientes</description>
+	<packaging>jar</packaging>
+	<scm>
+		<connection>scm:cvs:pserver:F0113980, F0117446:@li158:/repositorio/wsad/desenv:buscadorPotenciaisClientes/buscadorPotenciaisClientesEJBClient</connection>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>ISO-8859-1</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javaee</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesJPA</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesVO</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+		</dependency>
+	</dependencies>
+</project>

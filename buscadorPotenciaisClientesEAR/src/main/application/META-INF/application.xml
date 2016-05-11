@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" id="buscadorPotenciaisClientes_1" version="5">
+  <display-name>buscadorPotenciaisClientesEAR</display-name>
+  <module id="Module_1397592714459">
+    <web>
+      <web-uri>buscadorPotenciaisClientesWS.war</web-uri>
+      <context-root>buscadorPotenciaisClientesWS</context-root>
+    </web>
+  </module>
+  <module id="Module_1397592714412">
+    <ejb>buscadorPotenciaisClientesEJB.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

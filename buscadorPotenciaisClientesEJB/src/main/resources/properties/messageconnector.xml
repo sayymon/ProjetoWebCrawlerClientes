@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messageconnector>
+
+    <cenario nome="automovel" 
+             tipocenario="pseudo" 
+             requestqueue="jms/automovel_4gl01RRQ" 
+             responsequeue="jms/automovel_4gl01RRS" 
+             responsetimeout="60000" 
+             requesttimetolive="60000" 
+             tipoconexao="jms" 
+             queueconectionfactory="jms/automovel_4glQCF"/>
+    
+</messageconnector>

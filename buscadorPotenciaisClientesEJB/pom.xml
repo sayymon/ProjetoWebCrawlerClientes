@@ -1,0 +1,128 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<!--  
+	<parent>
+		<groupId>br.com.impacta</groupId>
+		<artifactId>buscadorPotenciaisClientes</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	-->
+	<groupId>br.com.impacta</groupId>
+	<artifactId>buscadorPotenciaisClientesEJB</artifactId>
+	<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->	
+	<name>buscadorPotenciaisClientesEJB</name>
+	<description>Modulo EJB da aplicacao buscadorPotenciaisClientes</description>
+	<packaging>ejb</packaging>
+	<scm>
+		<connection>scm:cvs:pserver:F0113980, F0117446:@li158:/repositorio/wsad/desenv:buscadorPotenciaisClientes/buscadorPotenciaisClientesEJB</connection>
+	</scm>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>ISO-8859-1</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<ejbVersion>3.0</ejbVersion>
+					<generateClient>false</generateClient>
+					<archive>
+						<manifest-file>src/main/resources/META-INF/MANIFEST.MF</manifest-file>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+					<filterDeploymentDescriptor>true</filterDeploymentDescriptor>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<!--  
+		<dependency>
+		  <groupId>com.ibm.websphere</groupId>
+		  <artifactId>ws_runtime</artifactId>
+		  <version>6.1.0</version>
+		  <scope>provided</scope>
+		</dependency>
+		-->
+		
+		<dependency>
+			<groupId>javaee</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesJPA</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesEJBClient</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+			<type>jar</type>
+		</dependency>
+		<dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>18.0</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>commons-collections</groupId>
+		  <artifactId>commons-collections</artifactId>
+		  <version>3.1</version>
+		</dependency>
+		
+		<!-- TODO verificar essa dpendência, foi colocada por causa dos VO's do POL -->
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>0.6.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>infraconverter</artifactId>
+			<version>1.0.2-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.18</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	</dependencies>
+</project>

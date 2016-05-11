@@ -1,0 +1,111 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<!--  
+	<parent>
+		<groupId>br.com.impacta</groupId>
+		<artifactId>buscadorPotenciaisClientes</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	-->
+	<groupId>br.com.impacta</groupId>
+	<artifactId>buscadorPotenciaisClientesEAR</artifactId>
+	<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->	
+	<name>buscadorPotenciaisClientesEAR</name>
+	<description>Modulo EAR da aplicacao buscadorPotenciaisClientes</description>
+	<packaging>ear</packaging>
+	<scm>
+		<connection>scm:cvs:pserver:F0113980, F0117446:@li158:/repositorio/wsad/desenv:buscadorPotenciaisClientes/buscadorPotenciaisClientesEAR</connection>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>ISO-8859-1</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<skinnyWars>true</skinnyWars>
+					<version>5</version>
+					<generateApplicationXml>false</generateApplicationXml>
+					<modules>
+						<ejbModule>
+							<groupId>br.com.impacta</groupId>
+							<artifactId>buscadorPotenciaisClientesEJB</artifactId>
+							<!--Devido a publicação automatizada (via publicador) Websphere precisa 
+								que mesmo nome seja mantido entre versões -->
+							<bundleFileName>buscadorPotenciaisClientesEJB.jar</bundleFileName>
+						</ejbModule>
+						<webModule>
+							<groupId>br.com.impacta</groupId>
+							<artifactId>buscadorPotenciaisClientesWS</artifactId>
+							<contextRoot>buscadorPotenciaisClientes</contextRoot>
+							<!--Devido a publicação automatizada (via publicador) Websphere precisa 
+								que mesmo nome seja mantido entre versões -->
+							<bundleFileName>buscadorPotenciaisClientesWS.war</bundleFileName>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesEJBClient</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesEJB</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+			<type>ejb</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.impacta</groupId>
+			<artifactId>buscadorPotenciaisClientesWS</artifactId>
+			<version>1.0-SNAPSHOT</version>  <!-- VERSAO_buscadorPotenciaisClientes-->
+			<type>war</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>m2e</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.maven.ide.eclipse</groupId>
+						<artifactId>lifecycle-mapping</artifactId>
+						<version>0.10.0</version>
+						<configuration>
+							<mappingId>customizable</mappingId>
+							<configurators>
+								<configurator
+									id="org.maven.ide.eclipse.configuration.wtp.configurator" />
+							</configurators>
+							<mojoExecutions>
+								<mojoExecution>org.apache.maven.plugins:maven-resources-plugin::resources,testResources</mojoExecution>
+							</mojoExecutions>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
