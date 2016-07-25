@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package br.com.buscador.clientes.dominio.enums;
+
+/**
+ * Tipo Escolaridade
+ * 
+ * @author Saymon
+ *
+ */
+public enum TipoEscolaridadeEnum {
+	ANALFABETO,
+	FUNDAMENTAL_INCOMPLETO,
+	FUNDAMENTAL_COMPLETO,
+	MEDIO_INCOMPLETO, 	
+	MEDIO_COMPLETO,
+	SUPERIOR_INCOMPLETO, 	
+	SUPERIOR_COMPLETO,
+	POS_GRADUACAO_INCOMPLETA,
+	POS_GRADUACAO_COMPLETA,
+	MESTRADO_INCOMPLETO,
+	MESTRADO_COMPLETO,
+	DOUTORADO_INCOMPLETO,
+	DOUTORADO_COMPLETO;
+}
