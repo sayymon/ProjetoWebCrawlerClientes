@@ -1,0 +1,49 @@
+                                    ------
+                                    Nome da área
+                                    ------
+                                   	email.area@impacta.com.br
+                                    ------
+                                    data
+                                    ------
+                                    
+	Projeto exemplo da arquitetura 3.0!
+	Veja que aqui você pode documentar seu projeto!
+	Veja como escrever este documento em {{http://maven.apache.org/doxia/references/apt-format.html}}
+	
+Nome do projeto
+
+	Os documentos deste projeto estão em file://nt102/DOC_MDS...
+
+* Recursos que podem ser utilizados
+
+	* jdbc/xxxx: apontando para a base do xxx model;
+	* EJBs externos
+
+* Informações gerais
+	
+	Para saber mais sobre a nova arquitetura e as ferramentas
+	utilizadas utilize a documentação abaixo:
+	
+	* {{{./overview-nova-arquitetura.html}overview-nova-arquitetura.html}}:
+	para ter uma idéia geral da nova arquitetura.
+	
+	
+	* {{{./guia-configuracao-ambiente.html}guia-configuracao-ambiente.html}}
+	para ter o ambiente necessário para a nova arquitetura.
+	
+	
+	* {{{./guia-desenv-jee-maven.html}guia-desenv-jee-maven.html}}:
+	se você vai desenvolver aplicações JEE.
+	
+	
+	* {{{guia-desenv-standalone-maven.html}guia-desenv-standalone-maven.html}}:
+	para desenvolvimento de aplicações standalone (ex dos chamados 'listeners').
+	
+	
+	* {{{guia-desenv-batch.html}guia-desenv-batch.html}}:
+	se você vai desenvolver aplicações em batch.
+	
+	
+	* {{{guia-utilizacao-legado.html}guia-utilizacao-legado.html}}:
+	para saber como se conectar com os EJBs dos modelos a partir
+	das aplicações na arquitetura 3.0

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="buscadorPotenciaisClientesEAR-1.0-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="buscadorPotenciaisClientesEJB.jar" deploy-path="/" handle="module:/resource/buscadorPotenciaisClientesEJB/buscadorPotenciaisClientesEJB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="buscadorPotenciaisClientesWS.war" deploy-path="/" handle="module:/resource/buscadorPotenciaisClientesWS/buscadorPotenciaisClientesWS">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="buscadorPotenciaisClientesEJBClient-1.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/buscadorPotenciaisClientesEJBClient/buscadorPotenciaisClientesEJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-18.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/google/guava/guava/18.0/guava-18.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="buscadorPotenciaisClientesJPA-1.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/buscadorPotenciaisClientesJPA/buscadorPotenciaisClientesJPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="buscadorPotenciaisClientesVO-1.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/buscadorPotenciaisClientesVO/buscadorPotenciaisClientesVO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="joda-time-2.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/joda-time/joda-time/2.1/joda-time-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxb2-basics-runtime-0.6.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.6.2/jaxb2-basics-runtime-0.6.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="infraconverter-1.0.2-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/infraConverter/infraConverter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
